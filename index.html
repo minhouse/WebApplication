@@ -3,61 +3,72 @@
 <html lang="ja">
     <body>
         <head>
-            <!--<title></title>-->
-            <img src="/Users/tokuharaminho/Desktop/WebApp/HTML課題1/images/logo.png" width="40">
+            <!--相対パスを使用すればどのサーバーでも画像が表示される-->
+            <img src="images/logo.png" width="40">
             <br>
         </head>
 
         <main>
+            <!--SEO対策。navタグの中身はリスト化。クローラーがサイトのアウトラインを容易に判断できる-->
             <nav>
-                <a href="file:///Users/tokuharaminho/Desktop/WebApp/HTML%E8%AA%B2%E9%A1%8C1/html1.html">・ホームへ戻る</a><br>
-                <a href="file:///Users/tokuharaminho/Desktop/WebApp/HTML%E8%AA%B2%E9%A1%8C1/html1.html">・お知らせ</a><br>
-                <a href="file:///Users/tokuharaminho/Desktop/WebApp/HTML%E8%AA%B2%E9%A1%8C1/html1.html">・新着情報</a><br>
-                <a href="file:///Users/tokuharaminho/Desktop/WebApp/HTML%E8%AA%B2%E9%A1%8C1/html1.html">・お問い合わせ</a><br>
+            <ul>
+                <li><a href="index.html">・ホームへ戻る</a></li><br>
+                <li><a href="index.html">・お知らせ</a></li><br>
+                <li><a href="index.html">・新着情報</a></li><br>
+                <li><a href="index.html">・お問い合わせ</a></li><br>
+            </ul>
             </nav>
             <br>
 
-            <img src="/Users/tokuharaminho/Desktop/WebApp/HTML課題1/images/image.jpg" width="500">
+            <img src="images/image.jpg" width="500">
 
             <article>
+                <!--h1タグは1ページにひとつだけ-->
                 <h1>プログラミングを学習して副業をしてみよう！</h1>
                     <p>皆さんは副業の経験がありますか？プログラミングは
-                    <a href="file:///Users/tokuharaminho/Desktop/WebApp/HTML%E8%AA%B2%E9%A1%8C1/html1.html">おすすめの副業ランキング</a>
+                    <a href="index.html">おすすめの副業ランキング</a>
                     でもかなり人気が高いですね。</p>
-                    <!--<br>-->
-                    <p>-------</p>
-                    <p>--中略--</p>
-                    <p>-------</p>
-                <h1>仕事する場所が選べる。</h1>
-                    <p>-------</p>
-                    <p>--中略--</p>
-                    <p>-------</p>
-                <h1>高単価な仕事が狙える。</h1>
-                    <p>-------</p>
-                    <p>--中略--</p>
-                    <p>-------</p>
-                <h1>需要が高い。</h1>
-                    <p>-------</p>
-                    <p>--中略--</p>
-                    <p>-------</p>
+                        <p>-------</p>
+                        <p>--中略--</p>
+                        <p>-------</p>
+                    <!--以下３つの要点はSectionタグを利用する事で要点を割り振る意味となる-->
+                    <section>
+                    <h2>仕事する場所が選べる。</h2>
+                        <p>-------</p>
+                        <p>--中略--</p>
+                        <p>-------</p>
+                    </section>
+                    <section>
+                    <h2>高単価な仕事が狙える。</h2>
+                        <p>-------</p>
+                        <p>--中略--</p>
+                        <p>-------</p>
+                    </section>
+                    <section>
+                    <h2>需要が高い。</h2>
+                        <p>-------</p>
+                        <p>--中略--</p>
+                        <p>-------</p>
+                    </section>
             </article>
-
-            <hr>
-
-            <section>
-                <h2>学習コンテンツ</h2>
-                    <a href="file:///Users/tokuharaminho/Desktop/WebApp/HTML%E8%AA%B2%E9%A1%8C1/html1.html">・HTML/CSS</a><br>
-                    <a href="file:///Users/tokuharaminho/Desktop/WebApp/HTML%E8%AA%B2%E9%A1%8C1/html1.html">・JavaScript</a><br>
-                    <a href="file:///Users/tokuharaminho/Desktop/WebApp/HTML%E8%AA%B2%E9%A1%8C1/html1.html">・PHP</a><br>
-                <h2>その他ご相談</h2>
-                    <a href="file:///Users/tokuharaminho/Desktop/WebApp/HTML%E8%AA%B2%E9%A1%8C1/html1.html">・学習方法</a><br>
-                    <a href="file:///Users/tokuharaminho/Desktop/WebApp/HTML%E8%AA%B2%E9%A1%8C1/html1.html">・キャリア相談</a><br>
-            </section>
-
             <hr>
         </main>
 
+        <!--mainではない付帯情報はfooterに含める事-->
         <footer>
+            <!--２つの大きな括りがあるのでそれぞれをsectionで囲む-->
+            <section>
+                <h2>学習コンテンツ</h2>
+                    <a href="index.html">・HTML/CSS</a><br>
+                    <a href="index.html">・JavaScript</a><br>
+                    <a href="index.html">・PHP</a><br>
+            </section>
+            <section>
+                <h2>その他ご相談</h2>
+                    <a href="index.html">・学習方法</a><br>
+                    <a href="index.html">・キャリア相談</a><br>
+            </section>
+            <!--smallタグは文字を小さくするだけでなく重要な情報では無いことをクローラーに伝える。権利系情報の表示に使われる-->
             <small>copyright &copy; 2019 manaberuit. All rights reserved</small>
         </footer>
     </body>
