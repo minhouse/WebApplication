@@ -1,75 +1,182 @@
 <!DOCTYPE html>
 
 <html lang="ja">
+
     <body>
         <head>
-            <!--相対パスを使用すればどのサーバーでも画像が表示される-->
-            <img src="images/logo.png" width="40">
+            <!--<link rel="stylesheet" href="Path for CSS">-->
+            <style type="text/css" media="screen">
+                header	{
+                    display: flex;
+                    align-items: flex-start;
+                    width: 975px;
+                    gap: 100px;
+                }
+
+                .logo {
+                    margin-top: 18px;
+                    margin-left: 10px;
+                    align-items: flex-start;
+                }
+
+                ul {
+                    display: flex;
+                    align-items: flex-start;
+                    margin-left: 370px;
+                    padding-bottom: 1px;
+                }
+
+                li {
+                    float: right;
+                    list-style-type: none;
+                }
+
+                li a {
+                    float: right;
+                    color: black;
+                    text-align: right;
+                    padding: 14px 16px;
+                }
+
+                .content {
+                    width:965px;
+                    margin-left: 20px;
+                }
+
+                .content img {
+                    width: 100%;
+                }
+
+                .container{
+                    display: flex;
+                    width: 1000px;
+                    gap: 30px;
+                }
+
+                .boxA {
+                    flex: 1 0 450px;
+                    margin-left: 20px;
+                    margin-right: 5px;
+                }
+
+                .boxB {
+                    flex: 1 0 400px;
+                    margin-left: 40px;
+                    margin-right: 10px;
+                }
+
+                section {
+                    border: 1px solid;
+                    border-radius: 4px;
+                    outline-color: beige;
+                    padding-left: 20px;
+                    padding-right: 20px;
+                    margin-top: 10px;
+                }
+
+                footer	{
+                    width: 975px;
+                    background-color: rgb(237, 233, 233);
+                    margin: 20px;
+                }
+
+                footer p {
+                    text-align: center;
+                }
+
+                .f1 {
+                    margin-right: 100px;
+                    margin-bottom: 10px;
+                }
+
+                .f2 {
+                    margin-bottom: 10px;
+                }
+
+            </style>
+
+        <header>
+            <div class="container">
+                <div class="logo">
+                    <!--相対パスを使用すればどのサーバーでも画像が表示される-->
+                    <img src="images/logo.png" width="40" height="40">
+                </div>
             <br>
-        </head>
+                <!--SEO対策。navタグの中身はリスト化。クローラーがサイトのアウトラインを容易に判断できる-->
+                <nav>
+                    <ul>
+                        <li><a href="index.html">ホームへ戻る</a></li><br>
+                        <li><a href="index.html">お知らせ</a></li><br>
+                        <li><a href="index.html">新着情報</a></li><br>
+                        <li><a href="index.html">お問い合わせ</a></li><br>
+                    </ul>
+                </nav>
+            </div>
+        </header>
 
         <main>
-            <!--SEO対策。navタグの中身はリスト化。クローラーがサイトのアウトラインを容易に判断できる-->
-            <nav>
-            <ul>
-                <li><a href="index.html">・ホームへ戻る</a></li><br>
-                <li><a href="index.html">・お知らせ</a></li><br>
-                <li><a href="index.html">・新着情報</a></li><br>
-                <li><a href="index.html">・お問い合わせ</a></li><br>
-            </ul>
-            </nav>
             <br>
+            <div class="content">
+                <img src="images/image.jpg">
+            </div>
 
-            <img src="images/image.jpg" width="500">
-
-            <article>
-                <!--h1タグは1ページにひとつだけ-->
-                <h1>プログラミングを学習して副業をしてみよう！</h1>
+            <div class="container">
+            <div class="boxA">
+            <article><!--articleは独立したコンテンツを表す-->
+                <h1><font size="4">プログラミングを学習して副業をしてみよう！</font></h1><!--h1タグは1ページにひとつだけ-->
                     <p>皆さんは副業の経験がありますか？プログラミングは
                     <a href="index.html">おすすめの副業ランキング</a>
                     でもかなり人気が高いですね。</p>
                     <p>-------</p>
                     <p>--中略--</p>
                     <p>-------</p>
-                    <!--以下３つの要点はSectionタグを利用する事で要点を割り振る意味となる-->
-                <section>
-                <h2>仕事する場所が選べる。</h2>
-                    <p>-------</p>
-                    <p>--中略--</p>
-                    <p>-------</p>
-                </section>
-                <section>
-                <h2>高単価な仕事が狙える。</h2>
-                    <p>-------</p>
-                    <p>--中略--</p>
-                    <p>-------</p>
-                </section>
-                <section>
-                <h2>需要が高い。</h2>
-                    <p>-------</p>
-                    <p>--中略--</p>
-                    <p>-------</p>
-                </section>
             </article>
-            <hr>
+            </div>
+
+            <div class="boxB">
+                <section><!--以下３つの要点はSectionタグを利用する事で要点を割り振る意味。sectionは章や区切りを表す-->
+                <h2><font size="4">仕事する場所が選べる。</font></h2>
+                    <p>-------</p>
+                    <p>--中略--</p>
+                    <p>-------</p>
+                </section>
+
+                <section>
+                <h2><font size="4">高単価な仕事が狙える。</font></h2>
+                    <p>-------</p>
+                    <p>--中略--</p>
+                    <p>-------</p>
+                </section>
+
+                <section>
+                <h2><font size="4">需要が高い。</font></h2>
+                    <p>-------</p>
+                    <p>--中略--</p>
+                    <p>-------</p>
+                </section>
+            </div>
+        </div>
         </main>
 
         <!--mainではない付帯情報はfooterに含める事-->
+        <!--２つの大きな括りがあるのでそれぞれをsectionで囲む-->
+        <!--smallタグは文字を小さくするだけでなく重要な情報では無いことをクローラーに伝える。権利系情報の表示に使われる-->
         <footer>
-            <!--２つの大きな括りがあるのでそれぞれをsectionで囲む-->
-            <section>
-                <h2>学習コンテンツ</h2>
-                    <a href="index.html">・HTML/CSS</a><br>
-                    <a href="index.html">・JavaScript</a><br>
-                    <a href="index.html">・PHP</a><br>
-            </section>
-            <section>
-                <h2>その他ご相談</h2>
-                    <a href="index.html">・学習方法</a><br>
-                    <a href="index.html">・キャリア相談</a><br>
-            </section>
-            <!--smallタグは文字を小さくするだけでなく重要な情報では無いことをクローラーに伝える。権利系情報の表示に使われる-->
-            <small>copyright &copy; 2019 manaberuit. All rights reserved</small>
+            <div class="container">
+                <div class="f1">
+                    <h2><font size="4">学習コンテンツ</font></h2>
+                        <a href="index.html">・HTML/CSS</a><br>
+                        <a href="index.html">・JavaScript</a><br>
+                        <a href="index.html">・PHP</a><br>
+                </div>
+
+                <div class="f2">
+                    <h2><font size="4">その他ご相談</font></h2>
+                        <a href="index.html">・学習方法</a><br>
+                        <a href="index.html">・キャリア相談</a><br>
+                </div>
+            </div>
+            <p><small>copyright &copy; 2019 manaberuit. All rights reserved</small></p>
         </footer>
     </body>
 </html>
