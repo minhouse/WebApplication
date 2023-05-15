@@ -1,161 +1,162 @@
 /*ページ全体に余白を与える*/
 body {
-    padding: 10px;
+  padding: 10px;
 }
 
 header {
-    /*親要素であるheaderをコンテナーにする*/
-    display: flex;
-    margin-left: 30px;
-    /*headerの高さを調整*/
-    height: 50px;
-    /*ロゴとナビゲーションリストを横並びにする*/
-    justify-content: space-between;
-    /*ロゴとリストを垂直方向に中央揃え*/
-    align-items: center;
-    padding: 0px;
-    background-color: #fff;
-    /*border-bottom: 1px solid #ccc;*/
+  /*親要素であるheaderをコンテナーにする*/
+  display: flex;
+  margin-left: 30px;
+  /*headerの高さを調整*/
+  height: 50px;
+  /*ロゴとナビゲーションリストを横並びにする*/
+  justify-content: space-between;
+  /*ロゴとリストを垂直方向に中央揃え*/
+  align-items: center;
+  padding: 0px;
+  background-color: #fff;
+  /*border-bottom: 1px solid #ccc;*/
 }
 
 .logo img {
-    /*高さが50ピクセルで幅は自動的に調整*/
-    height: 40px;
-    width: auto;
-    /*ロゴのみ少し中央によせる*/
-    margin-left: 40px;
+  /*高さが50ピクセルで幅は自動的に調整*/
+  height: 40px;
+  width: auto;
+  /*ロゴのみ少し中央によせる*/
+  margin-left: 40px;
 }
 
 nav ul {
-    /*ナビゲーションリストをコンテナーにする。ulは順序なしのリスト*/
-    /*ul要素はリストの開始タグと終了タグで囲まれた部分がリスト全体として認識されその中に複数のli要素が含まれる*/
-    display: flex;
-    /*ナビゲーションリストのみ位置を調整
+  /*ナビゲーションリストをコンテナーにする。ulは順序なしのリスト*/
+  /*ul要素はリストの開始タグと終了タグで囲まれた部分がリスト全体として認識されその中に複数のli要素が含まれる*/
+  display: flex;
+  /*ナビゲーションリストのみ位置を調整
     justify-contentプロパティをflex-endに設定することで、navigation listの位置を右に寄せる*/
-    justify-content: flex-end;
-    /*リストマーカーを表示しない*/
-    list-style: none;
+  justify-content: flex-end;
+  /*リストマーカーを表示しない*/
+  list-style: none;
 }
 
 nav li {
-    /*リストの項目を作成するためにli要素を使用*/
-    margin-right: 20px;
+  /*リストの項目を作成するためにli要素を使用*/
+  margin-right: 20px;
 }
 
 nav a {
-    color: #6e9aecf9;
-    text-decoration: none;
-    font-size: 18px;
-    /*font-weight: bold;*/
+  color: #6e9aecf9;
+  text-decoration: none;
+  font-size: 18px;
+  /*font-weight: bold;*/
 }
 
 .picture {
-    /*.pictureの幅を100%にしpaddingやmarginを0に設定することで.pictureと.containerの幅を完全に一致
+  /*.pictureの幅を100%にしpaddingやmarginを0に設定することで.pictureと.containerの幅を完全に一致
     この場合.containerの幅は、.boxAと.boxBの幅の合計が100%になるように指定する必要がある*/
-    width: 100%;
-    margin: 0px;
-    padding: 0px;
-    /*margin-top: 0px;
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+  /*margin-top: 0px;
     margin-left: 10px;
     padding-top: 0px;*/
 }
 
 .container {
-    /*containerがFlexboxであることを示し、.boxAと.boxBが50％の幅を持つようになる*/
-    display: flex;
-    /*justify-contentプロパティを使って、flexアイテム間のスペースの分配方法を指定*/
-    justify-content: space-between;
-    width: 100%;
-    /*flexアイテムが指定された幅以上に広がってしまった場合、自動的に次の行に移動させるように指定*/
-    /*flex-wrap: wrap;*/
+  /*containerがFlexboxであることを示し、.boxAと.boxBが50％の幅を持つようになる*/
+  display: flex;
+  /*justify-contentプロパティを使って、flexアイテム間のスペースの分配方法を指定*/
+  justify-content: space-between;
+  width: 100%;
+  /*flexアイテムが指定された幅以上に広がってしまった場合、自動的に次の行に移動させるように指定*/
+  /*flex-wrap: wrap;*/
 }
 
-.boxA {
-    width: 47%;
+/*クラスの命名で単語の繋ぎはハイフンを使用するのが一般的*/
+.box-a {
+  width: 47%;
 }
 
 .container h2 {
-    font-size: 20px;
+  font-size: 20px;
 }
 
-.boxB {
-    width: 47%;
-    /*sectionのみを右に寄せる事ができる
+.box-b {
+  width: 47%;
+  /*sectionのみを右に寄せる事ができる
     margin-left: auto;*/
 }
 
 section {
-    border: 2px solid rgb(238, 238, 233);
-    border-radius: 4px;
-    padding-left: 25px;
-    padding-right: 5px;
-    margin-top: 10px;
-    margin-left: 0px;
-    margin-right: 0px;
+  border: 2px solid rgb(238, 238, 233);
+  border-radius: 4px;
+  padding-left: 25px;
+  padding-right: 5px;
+  margin-top: 10px;
+  margin-left: 0px;
+  margin-right: 0px;
 }
 
 section h2 {
-    font-size: 20px;
-    /*sectionタグの中のh2タグの見出しのみ少し右側に位置を調整する*/
-    padding-left: 10px;
+  font-size: 20px;
+  /*sectionタグの中のh2タグの見出しのみ少し右側に位置を調整する*/
+  padding-left: 10px;
 }
 
 article {
-    margin-right: 32px;
+  margin-right: 32px;
 }
 
 footer {
-    /*親要素であるfooterをコンテナーにする*/
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    margin-top: 20px;
-    background-color: rgb(237, 233, 233);
+  /*親要素であるfooterをコンテナーにする*/
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 20px;
+  background-color: rgb(237, 233, 233);
 }
 
 footer h2 {
-    font-size: 18px;
+  font-size: 18px;
 }
 
 footer p {
-    text-align: center;
+  text-align: center;
 }
 
 footer a {
-    display: block;
-    text-decoration: none;
-    color: #6e9aecf9;
-    margin: 0px;
-    padding: 0px;
+  display: block;
+  text-decoration: none;
+  color: #6e9aecf9;
+  margin: 0px;
+  padding: 0px;
 }
 
 footer ul {
-    padding-bottom: 1px;
-    padding-left: 15px;
-    margin-top: 0px;
-    margin-bottom: 0px;
+  padding-bottom: 1px;
+  padding-left: 15px;
+  margin-top: 0px;
+  margin-bottom: 0px;
 }
 
 footer li {
-    list-style-position: outside;
-    margin-bottom: 0px;
+  list-style-position: outside;
+  margin-bottom: 0px;
 }
 
 .f1 {
-    margin-right: 50px;
-    margin-bottom: 10px;
+  margin-right: 50px;
+  margin-bottom: 10px;
 }
 
 .f2 {
-    margin-bottom: 10px;
-    margin-right: 650px;
+  margin-bottom: 10px;
+  margin-right: 650px;
 }
 
 .small-container {
-    text-align: center;
-    margin-top: 10px;
+  text-align: center;
+  margin-top: 10px;
 }
 
 .small {
-    margin: 0px;
+  margin: 0px;
 }

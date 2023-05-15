@@ -1,99 +1,105 @@
 <!DOCTYPE html>
 
 <html lang="ja">
+  <head>
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-    <head>
-        <link rel="stylesheet" href="style.css">
-    </head>
+  <body>
+    <header>
+      <div class="logo">
+        <h1>
+          <!--h1タグは1ページにひとつだけ-->
+          <!--相対パスを使用すればどのサーバーでも画像が表示される-->
+          <img src="images/logo.png" class="logo" />
+        </h1>
+      </div>
+      <!--<br>-->
+      <!--SEO対策。navタグの中身はリスト化。クローラーがサイトのアウトラインを容易に判断できる-->
+      <nav>
+        <ul>
+          <li><a href="#">ホームへ戻る</a></li>
+          <li><a href="#">お知らせ</a></li>
+          <li><a href="#">新着情報</a></li>
+          <li><a href="#">お問い合わせ</a></li>
+        </ul>
+      </nav>
+    </header>
 
-    <body>
-        <header>
-            <div class="logo">
-                <h1>
-                    <!--h1タグは1ページにひとつだけ-->
-                    <!--相対パスを使用すればどのサーバーでも画像が表示される-->
-                    <img src="images/logo.png" class="logo">
-                </h1>
-            </div>
-            <!--<br>-->
-                <!--SEO対策。navタグの中身はリスト化。クローラーがサイトのアウトラインを容易に判断できる-->
-                <nav>
-                    <ul>
-                        <li><a href="#">ホームへ戻る</a></li>
-                        <li><a href="#">お知らせ</a></li>
-                        <li><a href="#">新着情報</a></li>
-                        <li><a href="#">お問い合わせ</a></li>
-                    </ul>
-                </nav>
-        </header>
+    <main>
+      <div>
+        <img src="images/image.jpg" class="picture" />
+      </div>
 
-        <main>
-            <div>
-                <img src="images/image.jpg" class="picture">
-            </div>
+      <div class="container">
+        <!--クラスの命名で単語の繋ぎはハイフンを使用するのが一般的-->
+        <div class="box-a">
+          <article>
+            <!--articleは独立したコンテンツを表す-->
+            <h2>プログラミングを学習して副業をしてみよう！</h2>
+            <p>
+              皆さんは副業の経験がありますか？プログラミングは
+              <a href="index.html">おすすめの副業ランキング</a>
+              でもかなり人気が高いですね。
+            </p>
+            <p>-------</p>
+            <p>--中略--</p>
+            <p>-------</p>
+          </article>
+        </div>
+        <div class="box-b">
+          <section>
+            <!--以下３つの要点はSectionタグを利用する事で要点を割り振る意味。sectionは章や区切りを表す-->
+            <h2>仕事する場所が選べる。</h2>
+            <p>-------</p>
+            <p>--中略--</p>
+            <p>-------</p>
+          </section>
+          <section>
+            <h2>高単価な仕事が狙える。</h2>
+            <p>-------</p>
+            <p>--中略--</p>
+            <p>-------</p>
+          </section>
+          <section>
+            <h2>需要が高い。</h2>
+            <p>-------</p>
+            <p>--中略--</p>
+            <p>-------</p>
+          </section>
+        </div>
+      </div>
+    </main>
 
-            <div class="container">
-                <div class="boxA">
-                <article><!--articleは独立したコンテンツを表す-->
-                    <h2>プログラミングを学習して副業をしてみよう！</h2>
-                        <p>皆さんは副業の経験がありますか？プログラミングは
-                        <a href="index.html">おすすめの副業ランキング</a>
-                        でもかなり人気が高いですね。</p>
-                        <p>-------</p>
-                        <p>--中略--</p>
-                        <p>-------</p>
-                </article>
-                </div>
-                <div class="boxB">
-                    <section><!--以下３つの要点はSectionタグを利用する事で要点を割り振る意味。sectionは章や区切りを表す-->
-                        <h2>仕事する場所が選べる。</h2>
-                            <p>-------</p>
-                            <p>--中略--</p>
-                            <p>-------</p>
-                    </section>
-                    <section>
-                        <h2>高単価な仕事が狙える。</h2>
-                            <p>-------</p>
-                            <p>--中略--</p>
-                            <p>-------</p>
-                    </section>
-                    <section>
-                        <h2>需要が高い。</h2>
-                            <p>-------</p>
-                            <p>--中略--</p>
-                            <p>-------</p>
-                    </section>
-                </div>
-            </div>
-        </main>
+    <!--mainではない付帯情報はfooterに含める事-->
+    <!--２つの大きな括りがあるのでそれぞれをsectionで囲む-->
+    <!--smallタグは文字を小さくするだけでなく重要な情報では無いことをクローラーに伝える。権利系情報の表示に使われる-->
+    <footer>
+      <div class="container">
+        <div class="f1">
+          <h2>学習コンテンツ</h2>
+          <ul>
+            <li><a href="#">HTML/CSS</a></li>
+            <li><a href="#">JavaScript</a></li>
+            <li><a href="#">PHP</a></li>
+          </ul>
+        </div>
 
-        <!--mainではない付帯情報はfooterに含める事-->
-        <!--２つの大きな括りがあるのでそれぞれをsectionで囲む-->
-        <!--smallタグは文字を小さくするだけでなく重要な情報では無いことをクローラーに伝える。権利系情報の表示に使われる-->
-        <footer>
-            <div class="container">
-                <div class="f1">
-                    <h2>学習コンテンツ</h2>
-                    <ul>
-                        <li><a href="#">HTML/CSS</a></li>
-                        <li><a href="#">JavaScript</a></li>
-                        <li><a href="#">PHP</a></li>
-                    </ul>
-                </div>
+        <div class="f2">
+          <h2>その他ご相談</h2>
+          <ul>
+            <li><a href="#">学習方法</a></li>
+            <li><a href="#">キャリア相談</a></li>
+          </ul>
+        </div>
+      </div>
 
-                <div class="f2">
-                    <h2>その他ご相談</h2>
-                    <ul>
-                        <li><a href="#">学習方法</a></li>
-                        <li><a href="#">キャリア相談</a></li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="small-container">
-                <!--smallスタイルを適用することで、レイアウトとスタイルの分離を促し、よりモダンでメンテナンス性の高いコードになる-->
-                <p class="small">copyright &copy; 2019 manaberuit. All rights reserved</p>
-            </div>
-        </footer>
-    </body>
+      <div class="small-container">
+        <!--smallスタイルを適用することで、レイアウトとスタイルの分離を促し、よりモダンでメンテナンス性の高いコードになる-->
+        <p class="small">
+          copyright &copy; 2019 manaberuit. All rights reserved
+        </p>
+      </div>
+    </footer>
+  </body>
 </html>
